@@ -1,12 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.AppHost", "MyAspireApp\MyAspireApp.AppHost\MyAspireApp.AppHost.csproj", "{CD38CCEB-E656-4DE8-B61D-EA3D851D73DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.AppHost", "src\MyAspireApp.AppHost\MyAspireApp.AppHost.csproj", "{CD38CCEB-E656-4DE8-B61D-EA3D851D73DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.ServiceDefaults", "MyAspireApp\MyAspireApp.ServiceDefaults\MyAspireApp.ServiceDefaults.csproj", "{F3AB43BE-A650-45CA-9A4B-7100E4B04058}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.ServiceDefaults", "src\MyAspireApp.ServiceDefaults\MyAspireApp.ServiceDefaults.csproj", "{F3AB43BE-A650-45CA-9A4B-7100E4B04058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.ApiService", "MyAspireApp\MyAspireApp.ApiService\MyAspireApp.ApiService.csproj", "{D417D3E1-5AA6-4C0C-97AC-DC0384EDC7BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.ApiService", "src\MyAspireApp.ApiService\MyAspireApp.ApiService.csproj", "{D417D3E1-5AA6-4C0C-97AC-DC0384EDC7BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.Web", "MyAspireApp\MyAspireApp.Web\MyAspireApp.Web.csproj", "{1C948755-5F80-42EF-B621-B81BB43750F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.Web", "src\MyAspireApp.Web\MyAspireApp.Web.csproj", "{1C948755-5F80-42EF-B621-B81BB43750F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{1474114F-92B6-4D07-87F8-5D325DCFCF12}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		src\MyAspireApp.AppHost\next-steps.md = src\MyAspireApp.AppHost\next-steps.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
