@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyAspireApp.ApiService.Data;
 
@@ -45,6 +46,26 @@ app.MapGet("/todo", async (TodoDbContext context, CancellationToken cancellation
     var data = await context.Todos.ToListAsync(cancellationToken);
 
     return Results.Ok(data);
+});
+
+app.MapGet("/dice-roll", ([FromServices] ILoggerFactory loggerFactory) =>
+{
+    var logger = loggerFactory.CreateLogger("DiceRoll");
+
+    var r = new Random();
+    var val = r.Next(1, 7);
+
+    if (val < 3)
+    {
+        logger.LogError("You had bad luck and rolled an {Value}", val);
+        return Results.BadRequest("Bad luck");
+    }
+
+    logger.LogInformation("You had good luck and rolled a {Value}", val);
+    return Results.Ok(new
+    {
+        value = val
+    });
 });
 
 app.MapPost("/todo", async (CreateTodo create, TodoDbContext context, CancellationToken cancellationToken) =>
